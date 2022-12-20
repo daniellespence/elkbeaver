@@ -1,0 +1,454 @@
+Model run by danis using Apollo 0.2.7 on R 4.1.3 for Windows.
+www.ApolloChoiceModelling.com
+
+Model name                       : mixl_trim_weight
+Model description                : No model description provided in apollo_control
+Model run at                     : 2022-06-22 08:18:49
+Estimation method                : bfgs
+Model diagnosis                  : successful convergence 
+Number of individuals            : 807
+Number of rows in database       : 4842
+Number of modelled outcomes      : 4842
+
+Number of cores used             :  3 
+Number of inter-individual draws : 1000 (halton)
+
+LL(start)                        : -5247.03
+LL(0)                            : -5319.48
+LL(C)                            : Not applicable
+LL(final)                        : -3902.02
+Rho-square (0)                   :  0.2665 
+Adj.Rho-square (0)               :  0.264 
+AIC                              :  7830.04 
+BIC                              :  7914.34 
+
+Estimated parameters             :  13
+Time taken (hh:mm:ss)            :  00:15:50.01 
+     pre-estimation              :  00:01:59.93 
+     estimation                  :  00:02:21.36 
+     post-estimation             :  00:11:28.72 
+Iterations                       :  31  
+Min abs eigenvalue of Hessian    :  11.34894 
+
+Unconstrained optimisation.
+
+Estimates:
+                        Estimate        s.e.   t.rat.(0)    Rob.s.e. Rob.t.rat.(0)
+b_cost                  -0.63513     0.02891     -21.970     0.04338       -14.640
+mu_stsquo               -3.68257     0.20599     -17.877     0.25229       -14.596
+mu_advisory             -1.18231     0.08056     -14.677     0.09410       -12.564
+mu_catch_per_trip        0.02858     0.02308       1.238     0.02346         1.218
+mu_wqi                   2.02087     0.14691      13.756     0.17733        11.396
+mu_proportion           -1.74549     0.15229     -11.462     0.17384       -10.041
+mu_weed                 -1.64777     0.21377      -7.708     0.23948        -6.881
+sigma_stsquo             2.37649     0.16053      14.804     0.21764        10.919
+sigma_advisory          -0.98870     0.09255     -10.683     0.14409        -6.862
+sigma_catch_per_trip     0.30104     0.02720      11.067     0.03805         7.912
+sigma_wqi                2.06885     0.16687      12.398     0.27917         7.411
+sigma_proportion         1.87103     0.16830      11.117     0.21947         8.525
+sigma_weed               2.97238     0.22157      13.415     0.25802        11.520
+
+
+Overview of choices for MNL model component :
+                                    alt1    alt2    alt3
+Times available                  4842.00 4842.00 4842.00
+Times chosen                     1786.00 1827.00 1229.00
+Percentage chosen overall          36.89   37.73   25.38
+Percentage chosen when available   36.89   37.73   25.38
+
+
+Classical covariance matrix:
+                                   b_cost            mu_stsquo          mu_advisory    mu_catch_per_trip
+b_cost                         8.3571e-04             0.002833           8.6349e-04           -2.885e-05
+mu_stsquo                        0.002833             0.042432             0.007509           7.3224e-04
+mu_advisory                    8.6349e-04             0.007509             0.006490           -5.418e-05
+mu_catch_per_trip              -2.885e-05           7.3224e-04           -5.418e-05           5.3272e-04
+mu_wqi                          -0.001507            -0.001406            -0.003403           -5.731e-06
+mu_proportion                    0.001320             0.015131             0.002225          -2.7509e-04
+mu_weed                          0.001431             0.013883             0.003055          -2.8459e-04
+sigma_stsquo                    -0.001490            -0.013727            -0.002616           2.0118e-04
+sigma_advisory                 6.0201e-04             0.004970             0.002240            1.151e-05
+sigma_catch_per_trip          -2.1262e-04            -0.001390          -3.3244e-04           -6.950e-05
+sigma_wqi                       -0.001532            -0.008273            -0.002699           3.3716e-04
+sigma_proportion              -8.1506e-04            -0.008030            -0.001822            1.035e-05
+sigma_weed                      -0.001708            -0.008604            -0.003783           1.0757e-04
+                                   mu_wqi        mu_proportion              mu_weed         sigma_stsquo
+b_cost                          -0.001507             0.001320             0.001431            -0.001490
+mu_stsquo                       -0.001406             0.015131             0.013883            -0.013727
+mu_advisory                     -0.003403             0.002225             0.003055            -0.002616
+mu_catch_per_trip              -5.731e-06          -2.7509e-04          -2.8459e-04           2.0118e-04
+mu_wqi                           0.021583            -0.005000            -0.004446             0.005583
+mu_proportion                   -0.005000             0.023191             0.002739            -0.002220
+mu_weed                         -0.004446             0.002739             0.045699            -0.004315
+sigma_stsquo                     0.005583            -0.002220            -0.004315             0.025771
+sigma_advisory                  -0.002749             0.001457             0.002475            -0.003251
+sigma_catch_per_trip           4.6665e-04          -3.8319e-04          -5.5672e-04           9.9802e-04
+sigma_wqi                        0.002322            -0.003513            -0.004804             0.008155
+sigma_proportion                 0.003192            -0.007127            -0.001613             0.005941
+sigma_weed                       0.006661            -0.003903            -0.014838             0.010904
+                           sigma_advisory sigma_catch_per_trip            sigma_wqi     sigma_proportion
+b_cost                         6.0201e-04          -2.1262e-04            -0.001532          -8.1506e-04
+mu_stsquo                        0.004970            -0.001390            -0.008273            -0.008030
+mu_advisory                      0.002240          -3.3244e-04            -0.002699            -0.001822
+mu_catch_per_trip               1.151e-05           -6.950e-05           3.3716e-04            1.035e-05
+mu_wqi                          -0.002749           4.6665e-04             0.002322             0.003192
+mu_proportion                    0.001457          -3.8319e-04            -0.003513            -0.007127
+mu_weed                          0.002475          -5.5672e-04            -0.004804            -0.001613
+sigma_stsquo                    -0.003251           9.9802e-04             0.008155             0.005941
+sigma_advisory                   0.008566          -5.0770e-04            -0.001026            -0.001473
+sigma_catch_per_trip          -5.0770e-04           7.3989e-04           6.8398e-04           2.2532e-04
+sigma_wqi                       -0.001026           6.8398e-04             0.027845             0.003764
+sigma_proportion                -0.001473           2.2532e-04             0.003764             0.028326
+sigma_weed                      -0.004722             0.001158             0.002033             0.004532
+                               sigma_weed
+b_cost                          -0.001708
+mu_stsquo                       -0.008604
+mu_advisory                     -0.003783
+mu_catch_per_trip              1.0757e-04
+mu_wqi                           0.006661
+mu_proportion                   -0.003903
+mu_weed                         -0.014838
+sigma_stsquo                     0.010904
+sigma_advisory                  -0.004722
+sigma_catch_per_trip             0.001158
+sigma_wqi                        0.002033
+sigma_proportion                 0.004532
+sigma_weed                       0.049093
+
+Robust covariance matrix:
+                                   b_cost            mu_stsquo          mu_advisory    mu_catch_per_trip
+b_cost                           0.001882             0.004630             0.001484          -1.0566e-04
+mu_stsquo                        0.004630             0.063652             0.014122           8.4827e-04
+mu_advisory                      0.001484             0.014122             0.008856            8.021e-05
+mu_catch_per_trip             -1.0566e-04           8.4827e-04            8.021e-05           5.5057e-04
+mu_wqi                          -0.002686            -0.002049            -0.004625           4.7758e-04
+mu_proportion                    0.002291             0.022562             0.003847          -8.4441e-04
+mu_weed                          0.001948             0.024009             0.005711          -3.2363e-04
+sigma_stsquo                    -0.003485            -0.030886            -0.008204           2.6895e-04
+sigma_advisory                   0.001189             0.011631             0.004503          -1.9126e-04
+sigma_catch_per_trip          -5.5795e-04            -0.003367          -8.1618e-04            9.529e-05
+sigma_wqi                       -0.002164            -0.020994            -0.007023           2.7142e-04
+sigma_proportion                -0.001748            -0.020893            -0.005386          -3.5135e-04
+sigma_weed                      -0.002669            -0.022363            -0.008209          -1.1365e-04
+                                   mu_wqi        mu_proportion              mu_weed         sigma_stsquo
+b_cost                          -0.002686             0.002291             0.001948            -0.003485
+mu_stsquo                       -0.002049             0.022562             0.024009            -0.030886
+mu_advisory                     -0.004625             0.003847             0.005711            -0.008204
+mu_catch_per_trip              4.7758e-04          -8.4441e-04          -3.2363e-04           2.6895e-04
+mu_wqi                           0.031444            -0.009652            -0.007782             0.008147
+mu_proportion                   -0.009652             0.030222             0.008288            -0.011699
+mu_weed                         -0.007782             0.008288             0.057349            -0.012225
+sigma_stsquo                     0.008147            -0.011699            -0.012225             0.047368
+sigma_advisory                  -0.009361             0.002437             0.002749            -0.006165
+sigma_catch_per_trip             0.001380          -8.5575e-04            -0.001413             0.003508
+sigma_wqi                       -0.002491            -0.010397            -0.005395             0.033007
+sigma_proportion                 0.007975            -0.014669            -0.006270             0.023187
+sigma_weed                       0.010498            -0.006430            -0.025932             0.027922
+                           sigma_advisory sigma_catch_per_trip            sigma_wqi     sigma_proportion
+b_cost                           0.001189          -5.5795e-04            -0.002164            -0.001748
+mu_stsquo                        0.011631            -0.003367            -0.020994            -0.020893
+mu_advisory                      0.004503          -8.1618e-04            -0.007023            -0.005386
+mu_catch_per_trip             -1.9126e-04            9.529e-05           2.7142e-04          -3.5135e-04
+mu_wqi                          -0.009361             0.001380            -0.002491             0.007975
+mu_proportion                    0.002437          -8.5575e-04            -0.010397            -0.014669
+mu_weed                          0.002749            -0.001413            -0.005395            -0.006270
+sigma_stsquo                    -0.006165             0.003508             0.033007             0.023187
+sigma_advisory                   0.020762            -0.001998             0.007982            -0.005049
+sigma_catch_per_trip            -0.001998             0.001448           8.1505e-04           6.0250e-04
+sigma_wqi                        0.007982           8.1505e-04             0.077938             0.018866
+sigma_proportion                -0.005049           6.0250e-04             0.018866             0.048167
+sigma_weed                      -0.014225             0.002701             0.013858             0.017371
+                               sigma_weed
+b_cost                          -0.002669
+mu_stsquo                       -0.022363
+mu_advisory                     -0.008209
+mu_catch_per_trip             -1.1365e-04
+mu_wqi                           0.010498
+mu_proportion                   -0.006430
+mu_weed                         -0.025932
+sigma_stsquo                     0.027922
+sigma_advisory                  -0.014225
+sigma_catch_per_trip             0.002701
+sigma_wqi                        0.013858
+sigma_proportion                 0.017371
+sigma_weed                       0.066576
+
+Classical correlation matrix:
+                                   b_cost            mu_stsquo          mu_advisory    mu_catch_per_trip
+b_cost                            1.00000              0.47576              0.37078            -0.043235
+mu_stsquo                         0.47576              1.00000              0.45252             0.154015
+mu_advisory                       0.37078              0.45252              1.00000            -0.029137
+mu_catch_per_trip                -0.04324              0.15401             -0.02914             1.000000
+mu_wqi                           -0.35486             -0.04648             -0.28755            -0.001690
+mu_proportion                     0.29984              0.48234              0.18136            -0.078263
+mu_weed                           0.23155              0.31526              0.17737            -0.057680
+sigma_stsquo                     -0.32100             -0.41511             -0.20231             0.054296
+sigma_advisory                    0.22501              0.26068              0.30045             0.005388
+sigma_catch_per_trip             -0.27040             -0.24805             -0.15171            -0.110706
+sigma_wqi                        -0.31764             -0.24068             -0.20075             0.087542
+sigma_proportion                 -0.16752             -0.23161             -0.13438             0.002663
+sigma_weed                       -0.26671             -0.18851             -0.21196             0.021035
+                                   mu_wqi        mu_proportion              mu_weed         sigma_stsquo
+b_cost                          -0.354860              0.29984              0.23155             -0.32100
+mu_stsquo                       -0.046477              0.48234              0.31526             -0.41511
+mu_advisory                     -0.287547              0.18136              0.17737             -0.20231
+mu_catch_per_trip               -0.001690             -0.07826             -0.05768              0.05430
+mu_wqi                           1.000000             -0.22351             -0.14158              0.23672
+mu_proportion                   -0.223508              1.00000              0.08413             -0.09080
+mu_weed                         -0.141579              0.08413              1.00000             -0.12574
+sigma_stsquo                     0.236724             -0.09080             -0.12574              1.00000
+sigma_advisory                  -0.202148              0.10334              0.12507             -0.21882
+sigma_catch_per_trip             0.116778             -0.09250             -0.09574              0.22856
+sigma_wqi                        0.094705             -0.13825             -0.13468              0.30443
+sigma_proportion                 0.129105             -0.27808             -0.04484              0.21989
+sigma_weed                       0.204626             -0.11568             -0.31326              0.30655
+                           sigma_advisory sigma_catch_per_trip            sigma_wqi     sigma_proportion
+b_cost                           0.225007             -0.27040             -0.31764            -0.167521
+mu_stsquo                        0.260682             -0.24805             -0.24068            -0.231613
+mu_advisory                      0.300448             -0.15171             -0.20075            -0.134383
+mu_catch_per_trip                0.005388             -0.11071              0.08754             0.002663
+mu_wqi                          -0.202148              0.11678              0.09471             0.129105
+mu_proportion                    0.103341             -0.09250             -0.13825            -0.278079
+mu_weed                          0.125074             -0.09574             -0.13468            -0.044842
+sigma_stsquo                    -0.218822              0.22856              0.30443             0.219894
+sigma_advisory                   1.000000             -0.20167             -0.06644            -0.094588
+sigma_catch_per_trip            -0.201672              1.00000              0.15069             0.049218
+sigma_wqi                       -0.066441              0.15069              1.00000             0.134025
+sigma_proportion                -0.094588              0.04922              0.13402             1.000000
+sigma_weed                      -0.230246              0.19212              0.05498             0.121528
+                               sigma_weed
+b_cost                           -0.26671
+mu_stsquo                        -0.18851
+mu_advisory                      -0.21196
+mu_catch_per_trip                 0.02103
+mu_wqi                            0.20463
+mu_proportion                    -0.11568
+mu_weed                          -0.31326
+sigma_stsquo                      0.30655
+sigma_advisory                   -0.23025
+sigma_catch_per_trip              0.19212
+sigma_wqi                         0.05498
+sigma_proportion                  0.12153
+sigma_weed                        1.00000
+
+Robust correlation matrix:
+                                   b_cost            mu_stsquo          mu_advisory    mu_catch_per_trip
+b_cost                             1.0000              0.42300              0.36348             -0.10379
+mu_stsquo                          0.4230              1.00000              0.59483              0.14329
+mu_advisory                        0.3635              0.59483              1.00000              0.03633
+mu_catch_per_trip                 -0.1038              0.14329              0.03633              1.00000
+mu_wqi                            -0.3491             -0.04579             -0.27714              0.11478
+mu_proportion                      0.3038              0.51441              0.23514             -0.20701
+mu_weed                            0.1875              0.39739              0.25341             -0.05759
+sigma_stsquo                      -0.3691             -0.56248             -0.40058              0.05267
+sigma_advisory                     0.1901              0.31994              0.33210             -0.05657
+sigma_catch_per_trip              -0.3380             -0.35079             -0.22794              0.10674
+sigma_wqi                         -0.1786             -0.29807             -0.26732              0.04143
+sigma_proportion                  -0.1836             -0.37733             -0.26077             -0.06823
+sigma_weed                        -0.2384             -0.34352             -0.33807             -0.01877
+                                   mu_wqi        mu_proportion              mu_weed         sigma_stsquo
+b_cost                           -0.34913              0.30377              0.18748             -0.36911
+mu_stsquo                        -0.04579              0.51441              0.39739             -0.56248
+mu_advisory                      -0.27714              0.23514              0.25341             -0.40058
+mu_catch_per_trip                 0.11478             -0.20701             -0.05759              0.05267
+mu_wqi                            1.00000             -0.31311             -0.18326              0.21109
+mu_proportion                    -0.31311              1.00000              0.19907             -0.30919
+mu_weed                          -0.18326              0.19907              1.00000             -0.23456
+sigma_stsquo                      0.21109             -0.30919             -0.23456              1.00000
+sigma_advisory                   -0.36636              0.09727              0.07967             -0.19658
+sigma_catch_per_trip              0.20452             -0.12937             -0.15511              0.42365
+sigma_wqi                        -0.05032             -0.21423             -0.08070              0.54324
+sigma_proportion                  0.20493             -0.38447             -0.11930              0.48544
+sigma_weed                        0.22945             -0.14336             -0.41967              0.49722
+                           sigma_advisory sigma_catch_per_trip            sigma_wqi     sigma_proportion
+b_cost                            0.19013             -0.33800             -0.17864             -0.18359
+mu_stsquo                         0.31994             -0.35079             -0.29807             -0.37733
+mu_advisory                       0.33210             -0.22794             -0.26732             -0.26077
+mu_catch_per_trip                -0.05657              0.10674              0.04143             -0.06823
+mu_wqi                           -0.36636              0.20452             -0.05032              0.20493
+mu_proportion                     0.09727             -0.12937             -0.21423             -0.38447
+mu_weed                           0.07967             -0.15511             -0.08070             -0.11930
+sigma_stsquo                     -0.19658              0.42365              0.54324              0.48544
+sigma_advisory                    1.00000             -0.36437              0.19844             -0.15965
+sigma_catch_per_trip             -0.36437              1.00000              0.07673              0.07215
+sigma_wqi                         0.19844              0.07673              1.00000              0.30792
+sigma_proportion                 -0.15965              0.07215              0.30792              1.00000
+sigma_weed                       -0.38261              0.27512              0.19238              0.30676
+                               sigma_weed
+b_cost                           -0.23844
+mu_stsquo                        -0.34352
+mu_advisory                      -0.33807
+mu_catch_per_trip                -0.01877
+mu_wqi                            0.22945
+mu_proportion                    -0.14336
+mu_weed                          -0.41967
+sigma_stsquo                      0.49722
+sigma_advisory                   -0.38261
+sigma_catch_per_trip              0.27512
+sigma_wqi                         0.19238
+sigma_proportion                  0.30676
+sigma_weed                        1.00000
+
+ 20 worst outliers in terms of lowest average per choice prediction:
+   ID Avg prob per choice
+ 7696         0.009681155
+ 7799         0.022287220
+ 7130         0.033851991
+ 7326         0.034222956
+ 7718         0.041312495
+ 7272         0.046946755
+ 7735         0.049058205
+ 7357         0.050295510
+ 7335         0.051463745
+ 7840         0.060793949
+ 1688         0.068960419
+ 7693         0.071978588
+ 7141         0.072099148
+ 7255         0.072764876
+ 7248         0.073562611
+ 2320         0.079079592
+ 2837         0.083663057
+  248         0.085119568
+  519         0.089269200
+ 2535         0.092959554
+
+Changes in parameter estimates from starting values:
+                         Initial    Estimate  Difference
+b_cost                    0.0000    -0.63513    -0.63513
+mu_stsquo                 0.0000    -3.68257    -3.68257
+mu_advisory               0.0000    -1.18231    -1.18231
+mu_catch_per_trip         0.0000     0.02858     0.02858
+mu_wqi                    0.0000     2.02087     2.02087
+mu_proportion             0.0000    -1.74549    -1.74549
+mu_weed                   0.0000    -1.64777    -1.64777
+sigma_stsquo              0.1000     2.37649     2.27649
+sigma_advisory            0.1000    -0.98870    -1.08870
+sigma_catch_per_trip      0.1000     0.30104     0.20104
+sigma_wqi                 0.1000     2.06885     1.96885
+sigma_proportion          0.1000     1.87103     1.77103
+sigma_weed                0.1000     2.97238     2.87238
+
+Settings and functions used in model definition:
+
+apollo_control
+--------------
+                       Value                                            
+modelName              "mixl_trim_weight"                               
+mixing                 "TRUE"                                           
+nCores                 "3"                                              
+indivID                "CaseID"                                         
+weights                "weight"                                         
+debug                  "FALSE"                                          
+modelDescr             "No model description provided in apollo_control"
+workInLogs             "FALSE"                                          
+seed                   "13"                                             
+HB                     "FALSE"                                          
+noValidation           "FALSE"                                          
+noDiagnostics          "FALSE"                                          
+calculateLLC           "TRUE"                                           
+outputDirectory        "C:/Users/danis/OneDrive/R/"                     
+panelData              "TRUE"                                           
+analyticGrad           "TRUE"                                           
+analyticGrad_manualSet "FALSE"                                          
+
+Hessian routines attempted
+--------------
+numerical second derivative of LL (using maxLik)
+
+Scaling in estimation
+--------------
+                          Value
+b_cost               0.63507666
+mu_stsquo            3.68280956
+mu_advisory          1.18237111
+mu_catch_per_trip    0.02857687
+mu_wqi               2.02063832
+mu_proportion        1.74549045
+mu_weed              1.64787369
+sigma_stsquo         2.37652155
+sigma_advisory       0.98863243
+sigma_catch_per_trip 0.30101958
+sigma_wqi            2.06905628
+sigma_proportion     1.87117732
+sigma_weed           2.97241690
+
+Scaling used in computing Hessian
+--------------
+                          Value
+b_cost               0.63513002
+mu_stsquo            3.68256547
+mu_advisory          1.18231084
+mu_catch_per_trip    0.02857693
+mu_wqi               2.02086834
+mu_proportion        1.74549155
+mu_weed              1.64777415
+sigma_stsquo         2.37649111
+sigma_advisory       0.98869630
+sigma_catch_per_trip 0.30103582
+sigma_wqi            2.06885431
+sigma_proportion     1.87102695
+sigma_weed           2.97237883
+
+
+apollo_randCoeff
+----------------
+function(apollo_beta, apollo_inputs){
+  randcoeff = list()
+  
+  randcoeff[["b_stsquo"]] = mu_stsquo + sigma_stsquo * draws_stsquo
+  randcoeff[["b_advisory"]] = mu_advisory + sigma_advisory * draws_advisory
+  randcoeff[["b_catch_per_trip"]] = mu_catch_per_trip + sigma_catch_per_trip * draws_catch_per_trip
+  randcoeff[["b_wqi"]] = mu_wqi + sigma_wqi * draws_wqi
+  randcoeff[["b_proportion"]] = mu_proportion + sigma_proportion * draws_proportion
+  randcoeff[["b_weed"]] = mu_weed + sigma_weed * draws_weed
+  return(randcoeff)
+}
+<bytecode: 0x000001878c739680>
+
+
+apollo_probabilities
+--------------------
+function(apollo_beta, apollo_inputs, functionality="estimate"){
+  
+  ### Function initialisation: do not change the following three commands
+  ### Attach inputs and detach after function exit
+  apollo_attach(apollo_beta, apollo_inputs)
+  on.exit(apollo_detach(apollo_beta, apollo_inputs))
+  
+  ### Create list of probabilities P
+  P = list()
+  
+  ### List of utilities: these must use the same names as in mnl_settings, order is irrelevant
+  V = list()
+  V[['alt1']] = b_cost*cost_1 + b_advisory*advisory_1 + b_catch_per_trip*catch_per_trip_1 +
+    b_wqi*wqi_1 + b_proportion*proportion_1+ b_weed*weed_1
+  V[['alt2']] = b_cost*cost_2 + b_advisory*advisory_2 + b_catch_per_trip*catch_per_trip_2 +
+    b_wqi*wqi_2 + b_proportion*proportion_2 + b_weed*weed_2
+  V[['alt3']] = b_stsquo
+  
+  ### Define settings for MNL model component
+  mnl_settings = list(
+    alternatives  = c(alt1=1, alt2=2, alt3=3),
+    avail         = list(alt1=1, alt2=1, alt3=1),
+    choiceVar     = choice,
+    V             = V
+  )
+  
+  ### Compute probabilities using MNL model
+  P[['model']] = apollo_mnl(mnl_settings, functionality)
+  
+  ### Take product across observation for same individual
+  P = apollo_panelProd(P, apollo_inputs, functionality)
+  
+  ### Add in weights
+  P = apollo_weighting(P,
+                       apollo_inputs, functionality)
+  
+  ### Average across inter-individual draws
+  P = apollo_avgInterDraws(P, apollo_inputs, functionality)
+  
+  ### Prepare and return outputs of function
+  P = apollo_prepareProb(P, apollo_inputs, functionality)
+  return(P)
+}
+<bytecode: 0x000001878d8f3f10>
