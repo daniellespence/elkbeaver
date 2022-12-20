@@ -103,7 +103,7 @@ g3
 
 plot_grid(g2, g3, ncol=1, align = 'v')
 
-##------ plotting together, then separating
+##------ plotting vertically
 
 g1 <- ggplot(v1, aes(x=question)) +
   geom_bar(aes(fill=answer), position="fill") +
