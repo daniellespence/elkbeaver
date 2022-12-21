@@ -41,9 +41,9 @@ Licence: Open Government Licence - Canada
 
 The data dictionary is also provided at this link. Copies of the data and data dictionary are provided as part of this archive.
 
-Data were prepared using the '1PrepareData.R' script available at https://github.com/plloydsmith/RecBenefitsCanadaCJE
+Data were prepared using scripts 1—4 available at https://github.com/daniellespence/elkbeaver/tree/main/Code
 
-Datafile used:  `CanadaRecData.csv`
+Datafile used:  `Elk_Beaver_Lake_Completes_Excel.xlsx`
 
 Computational requirements
 ---------------------------
@@ -53,13 +53,13 @@ Computational requirements
 - R 3.6.3
   - `pacman`
   - `tidyverse`
-  - `mice`
-  - `fastDummies`
-  - `furrr`
-  - `micemd`
-  - `randtoolbox`
-  - `rstan`
-  - `rmdcev`
+  - `purrrlyr`
+  - `anesrake`
+  - `apollo`
+  - `plyr`
+  - `ggplot2`
+  - `cowplot`
+
 
 ### Memory and Runtime Requirements
 
@@ -93,8 +93,9 @@ Instructions to Replicators
 
 `install.packages("pacman", "tidyverse", "mice", "fastDummies", "furrr", "micemd", "randtoolbox", "rstan", "rmdcev")`
 
-- Download the prepared data file entitled 'CanadaRecData'. 
-- Run the `RunAll_DS` R script to generate all figures and tables in the paper.
+- Prepare the data using scripts 1—4. 
+- Run the `5.1. MIXL_Linear.R` and '5.2. MIXL_Log.R' R scripts to generate model outputs and calculate welfare
+- Run the 'CS visualization_mixl.R' and 'Likert scales.R' to generate the two figures presented as results in the paper.
 
 List of tables and programs
 ---------------------------
@@ -108,16 +109,8 @@ The provided code reproduces:
 
 | Figure/Table  | Program             | Line Number | Output file                      | Note   |
 |-----------|-------------------------|-------------|----------------------------------|-------|
-| Table 1 | Disparaties_Demographics.R |             |   ||
-| Table 2 | RunAll_DS.R | 54          |    ||
-| Table 3 | RunAll_DS.R| 137         |    ||
-| Table 4 | RunAll_DS.R| 234         |     ||
-| Table 5 | RunAll_DS.R | 265         |                   ||
-| Table 6 | RunAll_DS.R | 281         |                      ||
-| Figure 1 | RunAll_DS.R |   433          |  subgroup_diff.png |          |
-| Figure 2 | RunAll_DS.R      | 473           | subgroup_diff_gender.png                      ||
-
-## References
-
+| Table 3 | 5.1. MIXL_Linear.R & 5.2. MIXL_Log.R |             |   ||
+| Figure 2 | Likert scales.R |          |    ||
+| Figure 3 | CS visualization_mixl.R|         |    ||
 
 ---
