@@ -8,7 +8,8 @@ ls()
 
 library(pacman)
 
-p_load("tidyverse", "purrrlyr", "likert", "ggplot2",  "scales", "cowplot", install =T)
+p_load(tidyverse, haven, car, ggplot2, mgcv, reshape2, likert, cowplot,
+       install = TRUE)
 
 #------------------------------------#
 # Import data
@@ -68,7 +69,7 @@ g2 <- ggplot(v2, aes(x=question)) +
     color='gray25', size=3
   ) +
   scale_fill_brewer(palette='Spectral', direction=1) +
-  scale_y_continuous(expand=expansion(0.01), labels=scales::percent_format()) +
+  scale_y_continuous(expand=expansion(0.005), labels=scales::percent_format()) +
   labs(x='EBl is safe for...', y='Percent Answered', fill = "Answer", title ='EBl is safe for...' 
   ) +
   theme_classic() +
@@ -93,7 +94,7 @@ g3<-  ggplot(v3, aes(x=question)) +
     color='gray25', size=3
   ) +
   scale_fill_brewer(palette='Spectral', direction=1) +
-  scale_y_continuous(expand=expansion(0.01), labels=scales::percent_format()) +
+  scale_y_continuous(expand=expansion(0.001), labels=scales::percent_format()) +
   labs(x='I am concerned about...', y='Percent Answered', fill=" ", title = 'I am concerned about...'
   ) +
   theme_classic() +
@@ -101,51 +102,12 @@ g3<-  ggplot(v3, aes(x=question)) +
 
 g3
 
-plot_grid(g2, g3, ncol=1, align = 'v')
-
-##------ plotting vertically
-
-g1 <- ggplot(v1, aes(x=question)) +
-  geom_bar(aes(fill=answer), position="fill") +
-  scale_fill_brewer(palette='Spectral', direction=-1) +
-  scale_y_continuous(expand=expansion(0), labels=scales::percent_format()) +
-  labs(x='Questions', y='Number Answered'
-  )+
-  theme_bw()+
-  theme(legend.position='right')
-
-g1
-
-
-g2<- g1+ facet_wrap( ~ Type, scales = "free_x", nrow = 1)
-
-g2
-
-v1_summary <- v1 %>%
-  group_by(question, answer) %>%
-  dplyr::summarize(freq = length(CaseID)) %>%
-  ungroup %>% group_by(question) %>% 
-  mutate(proportion = freq / sum(freq))
-
-g2 <- ggplot(v1, aes(x=question)) +
-  geom_bar(aes(fill=answer), position="fill") +
-  scale_fill_brewer(palette='Spectral', direction=-1) +
-  scale_y_continuous(expand=expansion(0), labels=scales::percent_format()) +
-  labs(x='Questions', y='Number Answered', fill = "Answer"
-  )+
-  geom_text(
-    data=v1_summary,
-    aes(y=freq, label=percent(proportion, accuracy = 1), group=answer),
-    position=position_fill(vjust=0.5),
-    color='gray25', size=2.3
-  )+
-  theme_bw()+
-  theme(legend.position='right')
-
-g2  
-
+p<- g2+g3 +plot_layout(guides = 'auto', nrow = 2)
+p
 
 #----------------- plotting with plot_likert
+
+p_load("sjPlot", "sjmisc", "tidyverse", "purrrlyr", "likert", "ggplot2")
 
 values <- values  %>% 
   rename("Swimming" = "S6Q7_A1",
@@ -157,13 +119,5 @@ values <- values  %>%
          "Wildlife" = "S6Q7_A7")
 
 
-plot_likert(values, catcount = 7, values = 'hide',show.n=F, legend.labels = c('Strongly Disagree', 'Disagree', 'Slighty disagree', 'Neutral', 'Slightly agree','Agree',  'Strongly Agree'))
-
-# For data that is organized on a scale of 1 to 7
-p1 <- plot_likert(values, cat.neutral = 4, values = 'sum.inside', show.n=F, legend.labels = c('Strongly Disagree', 'Disagree', 'Slighty disagree', 'Neutral', 'Slightly agree','Agree',  'Strongly Agree' ))
-
-p1+theme_bw()
-
-
-
+plot_likert(values, catcount = 7, values = 'sum.outside', show.n=F, legend.labels = c('Strongly Disagree', 'Disagree', 'Slighty disagree', 'Neither', 'Slightly agree', 'Agree', 'Strongly Agree'))+theme_bw()
 

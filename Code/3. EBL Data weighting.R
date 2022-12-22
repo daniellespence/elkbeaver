@@ -10,7 +10,7 @@ rm(list=ls(all=TRUE))
 
 library(anesrake)
 library(tidyverse)
-
+library(readxl)
 
 #-----------------------------------------------------------------------------
 ## create weights for full dataset
@@ -86,22 +86,11 @@ df2$D_INCOME<-as.factor(df2$D_INCOME)
 
 #table(df2['SCREENER1'])
 #-----------------------------------------------------------------------------
-## Calculate Base weights
-## base weights are the number of individuals living in the household
-# divided by the average number of individuals living in households in CRD
-# and then multiplied by the inverse of the response rate for the region they live in
-# not sure about response rate by region. May need to ask Bri if she has that info
-#for now, stic with household
-
-#baseweight<- as.numeric(df2$D_MEMBER_IN_HOUSEHOLD)/2.2
-
-
-#df2<-cbind(baseweight, df2)
 #-----------------------------------------------------------------------------
 ## Create target pop dataframe with variables of interest
 
 
-agetarget <- c(.33, .23, .18, .26)
+agetarget <- c(.30, .22, .17, .24)
 names(agetarget)<-c("age1839", "age4054", "age5564", "age6599")
 
 #edutarget <- c(.40, 0.08, 0.22, 0.18, 0.086)
@@ -110,7 +99,7 @@ names(agetarget)<-c("age1839", "age4054", "age5564", "age6599")
 gendertarget <- c(0.48, .52)
 names(gendertarget)<-c("man", "woman")
 
-incometarget <- c(.16, .17, .15, .18, .18, .13)
+incometarget <- c(.12, .16, .16, .20, .22, .22)
 names(incometarget)<-c(">29", "30to49", "50to69", "70to99", "100to149", "150+")
 
 #employ <- c(unemployed=0.03, PT=0.296, FT=0.269)
@@ -126,7 +115,6 @@ names(targets)<-c("D_AGE", "D_GENDER", "D_INCOME")
 
 outsave<- anesrake(targets, df2, caseid=df$CaseID)
 
-#adding baseweights causes error, thus was removed from line
 
 caseweights <- data.frame(cases=outsave$caseid, weights=outsave$weightvec)
 
